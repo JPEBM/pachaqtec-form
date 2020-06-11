@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Formulario en Frond End</title>
+    <style>
+        input:valid, select:valid, textarea:valid
+        {
+            border-color: green;
+        }
+        input:invalid, textarea:invalid
+        {
+            border-color: red;
+        }
+        form
+        {
+            text-align: center;
+            background-color: khaki;
+            width: 50%;
+            border-radius: 1%;
+        }
+        h1
+        {
+            color: white;
+        }
+        
+        body
+        {
+            background-color: rgb(158, 6, 125);
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario curso Frond End</h1>
+    <form action="#">
+        <label for="name">Nombre:</label><br>
+       <input type="text" id="name" placeholder="Nombre" required pattern="[a-z]"> <br><br>
+       <label for="lname">Apellido:</label><br>
+       <input type="text" id="lname" placeholder="Apellido" required> <br><br>
+       <label for="age">Seleccione su edad:</label><br>
+       <input type="number" id="age" placeholder="Edad" required min="18" max="30"><br><br>
+        <label for="sex">Sexo:</label>
+        <input type="radio" name="genero" id="men" value="Hombre" checked="Hombre">
+        <label for="men">Hombre</label>
+        <input type="radio" name="genero" id="woman" value="Mujer">
+        <label for="men">Mujer</label><br><br>
+        <label for="email">Correo Electronico:</label>
+        <input type="email" name="email" id="email" placeholder="Correo Electronico" required minlength="3" maxlength="10"><br><br>
+        <label for="hobby">Hobby:</label>
+        <input type="text" id="hobby" name="hobby" placeholder="hooby" required minlength="5" maxlength="8"><br><br>
+        <label for="country">Seleccione su pais:</label>
+        <select id="country" name="country" required disabled>
+            <option value="Perú">Perú</option>
+            <option value="Chile">Chile</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+          </select><br><br>
+        <label for="capital">Capital:</label>
+        <select name="capital" id="capital" required>
+            <option value="Lima">Lima</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Brasilia">Brasilia</option>
+        </select><br><br>
+        <textarea placeholder="Escriba aqui su mensaje..." name="message" rows="10" cols="30" required></textarea><br><br>
+        <button>Enviar</button>
+
+    </form>
+</body>
+</html>
